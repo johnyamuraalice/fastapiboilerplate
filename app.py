@@ -1,10 +1,7 @@
 from fastapi import FastAPI
 
-import fastapi
 
 app = FastAPI()
-
-print(fastapi.__file__)
 
 
 @app.get("/hello")

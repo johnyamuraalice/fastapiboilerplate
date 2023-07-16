@@ -44,16 +44,49 @@ Before you begin, ensure you have met the following requirements:
 
 You can run the application locally with Uvicorn, simply execute:
 
-    ```bash
-    uvicorn main:app --reload
-    ```
+```bash
+uvicorn main:app --reload
+```
 
 ## Development
 
 After making changes, if you want to push them to the main repository, do the following:
 
-    ```bash
+```bash
     git add .
     git commit -m "Describe your changes here"
     git push
-    ```
+```
+
+##Visual Studio Code Settings
+
+To configure Visual Studio Code for Python development, add the following settings to your workspace settings file (.vscode/settings.json):
+
+```json
+{
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "python.formatting.provider": "autopep8"
+}
+```
+
+These settings configure the default Python formatter to be autopep8, and it sets it as the default formatter for Python files.
+
+### Docker
+
+To run the application using Docker, follow these steps:
+
+1. Build the Docker image:
+
+   ```bash
+   docker build -t myapp .
+   ```
+
+2. Run the Docker container:
+
+   ```bash
+   docker run -d -p 8000:8000 myapp
+   ```
+
+The application will be accessible at http://localhost:8000.
